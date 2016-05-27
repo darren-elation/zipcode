@@ -1,8 +1,8 @@
-__author__ = 'Max Buck'
-__email__ = 'maxbuckdeveloper@gmail.com'
+__author__ = 'Darren Tan'
+__email__ = 'darren.tan@elationemr.com'
 __license__ = 'MIT'
-__package__ = 'zipcode'
-__version__ = '2.0.0'
+__package__ = 'zipcodeignoresamethread'
+__version__ = '0.1.0'
 
 
 import sqlite3 as db
@@ -21,7 +21,7 @@ _cur = _conn.cursor()
 # positions
 _ZIP_CODE = 0
 _ZIP_CODE_TYPE = 1
-_CITY= 2
+_CITY = 2
 _STATE = 3
 _LOCATION_TYPE = 4
 _LAT = 5

@@ -1,8 +1,8 @@
-__author__ = 'Max Buck'
-__email__ = 'maxbuckdeveloper@gmail.com'
+__author__ = 'Darren Tan'
+__email__ = 'darren.tan@elationemr.com'
 __license__ = 'MIT'
-__package__ = 'zipcode'
-__version__ = '2.0.0'
+__package__ = 'zipcodeignoresamethread'
+__version__ = '0.1.0'
 
 
 import sqlite3 as db
@@ -13,7 +13,7 @@ import math
 _db_filename = 'zipcode.db'
 _directory = os.path.dirname(os.path.abspath(__file__))
 _zipcodedb_location = os.path.join(_directory, _db_filename)
-_conn = db.connect(_zipcodedb_location)
+_conn = db.connect(_zipcodedb_location, check_same_thread=False)
 
 
 _cur = _conn.cursor()
@@ -21,7 +21,7 @@ _cur = _conn.cursor()
 # positions
 _ZIP_CODE = 0
 _ZIP_CODE_TYPE = 1
-_CITY= 2
+_CITY = 2
 _STATE = 3
 _LOCATION_TYPE = 4
 _LAT = 5
@@ -153,22 +153,3 @@ def isinradius(point, distance):
 		if haversine(point, (row[_LAT], row[_LONG])) <= distance:
 			zips_in_radius.append(Zip(row))
 	return zips_in_radius
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,7 +1,10 @@
 A simple python package for dealing with zip codes
 ==================================================
 
-Simple package for dealing with zip codes in python.  
+Simple package for dealing with zip codes in python. This is a fork from
+the package zipcode (https://github.com/buckmaxwell/zipcode) created to ignore
+checking if the sql object created is in the same thread as the current.
+
 Full documentation at https://pythonhosted.org/zipcode
 
     >>> import zipcode
@@ -18,5 +21,3 @@ Full documentation at https://pythonhosted.org/zipcode
     >>> 
     >>> cbus = (39.98, -82.98)
     >>> zipcode.isinradius(cbus, 20) #=> list of all zip code objects within 20 miles of 'cbus'
-
-

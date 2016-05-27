@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+zipcodeignoresamethread/__init__.py
+zipcodeignoresamethread/zipcode.db
+zipcodeignoresamethread.egg-info/PKG-INFO
+zipcodeignoresamethread.egg-info/SOURCES.txt
+zipcodeignoresamethread.egg-info/dependency_links.txt
+zipcodeignoresamethread.egg-info/requires.txt
+zipcodeignoresamethread.egg-info/top_level.txt
